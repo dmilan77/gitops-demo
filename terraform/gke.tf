@@ -14,7 +14,7 @@ resource "google_container_cluster" "primary" {
   name               = "gitops-demo"
   project             = "data-protection-01"
   location           = "us-central1-a"
-  initial_node_count = 1
+  initial_node_count = 3
 
   master_auth {
     username = ""
@@ -26,6 +26,9 @@ resource "google_container_cluster" "primary" {
   }
 
   node_config {
+    preemptible  = true
+    machine_type = "e2-medium"
+
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
