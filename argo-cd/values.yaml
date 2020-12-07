@@ -439,7 +439,7 @@ server:
     servicePortHttpName: http
     servicePortHttpsName: https
     namedTargetPort: true
-    loadBalancerIP: ""
+    loadBalancerIP: "34.71.64.186"
     loadBalancerSourceRanges:
       - 45.17.197.126/32
 
@@ -938,7 +938,7 @@ configs:
 
     # Argo expects the password in the secret to be bcrypt hashed. You can create this hash with
     # `htpasswd -nbBC 10 "" $ARGO_PWD | tr -d ':\n' | sed 's/$2y/$2a/'`
-    argocdServerAdminPassword: "lD9Xkh6jAPWpFHug"
+    argocdServerAdminPassword: "$2a$10$eZQDDv7D3gqI26aLepjkoeULg3JLZCnci1StdxMlto4umx7Q6lI6i"
     # Password modification time defaults to current time if not set
     # argocdServerAdminPasswordMtime: "2006-01-02T15:04:05Z"
 

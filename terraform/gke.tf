@@ -2,7 +2,8 @@ resource "google_container_cluster" "primary" {
   name               = "gitops-demo"
   location           = "us-central1-a"
   initial_node_count = 3
-  network   = google_compute_subnetwork.gitops_gke_subnetwork_us_central1.id
+  network   = google_compute_network.gitops_gke_network.id
+  subnetwork = google_compute_subnetwork.gitops_gke_subnetwork_us_central1.id
 
   master_auth {
     username = ""
